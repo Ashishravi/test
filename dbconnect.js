@@ -1,3 +1,8 @@
+
+
+
+
+
 'use strict';
 
  var mysql = require('mysql');
@@ -5,11 +10,11 @@
  var connection = mysql.createConnection({
  host: 'localhost',
  user: 'root',
- password: ''
+ password: '123456789',
+ database: 'medical'
  });
-
  connection.query(
- 'SELECT "foo" AS first_field, "bar" AS second_field',
+ 'SELECT *  FROM TEST',
  function (err, results, fields) {
  console.log(results);
  connection.end();
